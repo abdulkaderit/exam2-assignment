@@ -15,7 +15,7 @@ class _TaskScreenState extends State<TaskScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text("Confirmation"),
-          content: const Text("Are you sure want to delete?"),
+          content: const Text("Are you sure for delete?"),
           actions: [
             // DELETE BUTTON
             TextButton(
@@ -23,9 +23,8 @@ class _TaskScreenState extends State<TaskScreen> {
                 _removeTask(index); // Call function to remove task
                 Navigator.of(context).pop(); // Close the dialog
               },
-              child: const Text("Delete", style: TextStyle(color: Colors.red)),
+              child: const Icon(Icons.delete,size: 30, color: Colors.red),
             ),
-
             // CANCEL BUTTON
             TextButton(
               onPressed: () {
@@ -38,29 +37,6 @@ class _TaskScreenState extends State<TaskScreen> {
       },
     );
   }
-
-  // MySnackBar(message,context){return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));}
-  //
-  // MyAlertDialog(context){
-  //   return showDialog(context: context,
-  //       builder: (BuildContext context){
-  //         return Expanded(child: AlertDialog(
-  //           title: Text("Confirmation"),
-  //           content: Text("Are you sure for Delete?"),
-  //           actions: [
-  //             IconButton(onPressed: _removeTask(index), icon: Icon(Icons.delete)),
-  //             // TextButton(onPressed: (){
-  //             //   MySnackBar("Delete Success", context);Navigator.of(context).pop();
-  //             // }, child: Icon(Icons.cancel),),
-  //             TextButton(onPressed: (){
-  //               Navigator.of(context).pop();
-  //             }, child: Icon(Icons.delete))
-  //
-  //           ],
-  //         ));
-  //       }
-  //   );
-  // }
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 

@@ -1,1 +1,6 @@
-// TODO Implement this library.
+import 'package:flutter/cupertino.dart';
+import 'my_app.dart';
+
+void main() {
+  runApp(const MyApp());
+}// TODO Implement this library.
